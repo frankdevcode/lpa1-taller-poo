@@ -24,10 +24,10 @@ class Escritorio(Superficie):
         self._tiene_pasacables = value
         
     def calcular_precio(self) -> float:
-        precio = self.precio_base + (self.area * 15)
-        precio += self.numero_cajones * 20.0
+        precio = self.precio_base + (self.area * 15000)
+        precio += self.numero_cajones * 20000.0
         if self.tiene_pasacables:
-            precio += 10.0
+            precio += 10000.0
         return round(precio, 2)
         
     def obtener_descripcion(self) -> str:

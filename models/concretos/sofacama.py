@@ -74,14 +74,14 @@ class SofaCama(Sofa, Cama):
         precio *= 1.5  # 50% más caro por ser dual
         
         if self.mecanismo_conversion == "electrico":
-            precio += 200
+            precio += 200000
         elif self.mecanismo_conversion == "hidraulico":
-            precio += 150
+            precio += 150000
         else:
-            precio += 100
+            precio += 100000
             
         if self.incluye_colchon:
-            precio += 300
+            precio += 300000
             
         return round(precio, 2)
         
@@ -92,7 +92,7 @@ class SofaCama(Sofa, Cama):
         descripcion += f" Mecanismo: {self.mecanismo_conversion}."
         descripcion += f" Colchón incluido: {'Sí' if self.incluye_colchon else 'No'}."
         descripcion += f" Modo actual: {self.modo_actual}."
-        descripcion += f" Precio: ${self.calcular_precio():.2f}"
+        descripcion += f" Precio: $ {self.calcular_precio():,.0f} COP"
         return descripcion
         
     def obtener_capacidad_total(self) -> dict:

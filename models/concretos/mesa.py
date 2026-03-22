@@ -15,9 +15,9 @@ class Mesa(Superficie):
         self._es_extensible = value
         
     def calcular_precio(self) -> float:
-        precio = self.precio_base + (self.area * 10)
+        precio = self.precio_base + (self.area * 10000)
         if self.es_extensible:
-            precio += 40.0
+            precio += 40000.0
         return round(precio, 2)
         
     def obtener_descripcion(self) -> str:

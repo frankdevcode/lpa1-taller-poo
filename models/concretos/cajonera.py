@@ -25,9 +25,9 @@ class Cajonera(Almacenamiento):
         self._con_ruedas = value
         
     def calcular_precio(self) -> float:
-        precio = self.precio_base + (self.numero_cajones * 25.0)
+        precio = self.precio_base + (self.numero_cajones * 25000.0)
         if self.con_ruedas:
-            precio += 15.0
+            precio += 15000.0
         return round(precio, 2)
         
     def obtener_descripcion(self) -> str:

@@ -63,7 +63,7 @@ class MenuTienda:
         
         for i, mueble in enumerate(muebles, 1):
             try:
-                precio = f"${mueble.calcular_precio():.2f}"
+                precio = f"$ {mueble.calcular_precio():,.0f} COP"
                 tipo = type(mueble).__name__
                 table.add_row(
                     str(i),
@@ -319,7 +319,7 @@ class MenuTienda:
         
         for i, mueble in enumerate(muebles, 1):
             try:
-                precio = f"${mueble.calcular_precio():.2f}"
+                precio = f"$ {mueble.calcular_precio():,.0f} COP"
                 tipo = type(mueble).__name__
                 
                 row_data = [mueble.nombre, tipo, mueble.material, precio]
@@ -349,9 +349,9 @@ class MenuTienda:
         
         Cliente: {venta['cliente']}
         Producto: {venta['mueble']}
-        Precio original: ${venta['precio_original']:.2f}
+        Precio original: $ {venta['precio_original']:,.0f} COP
         Descuento aplicado: {venta['descuento']:.1f}%
-        PRECIO FINAL: ${venta['precio_final']:.2f}
+        PRECIO FINAL: $ {venta['precio_final']:,.0f} COP
         
         ¡Gracias por su compra!
         """

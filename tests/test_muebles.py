@@ -15,7 +15,7 @@ class TestMuebleBase:
     
     def test_no_puede_instanciar_mueble_directamente(self):
         with pytest.raises(TypeError):
-            mueble = Mueble("Test", "Madera", "Café", 100.0)
+            mueble = Mueble("Test", "Madera", "Café", 100000.0)
 
 
 class TestSilla:
@@ -26,7 +26,7 @@ class TestSilla:
             nombre="Silla Básica",
             material="Madera",
             color="Café",
-            precio_base=150.0,
+            precio_base=150000.0,
             tiene_respaldo=True
         )
 
@@ -34,7 +34,7 @@ class TestSilla:
             nombre="Silla Oficina",
             material="Metal",
             color="Negro",
-            precio_base=300.0,
+            precio_base=300000.0,
             tiene_respaldo=True,
             material_tapizado="cuero",
             altura_regulable=True,
@@ -47,14 +47,14 @@ class TestSilla:
     
     def test_calculo_precio_silla_basica(self):
         precio = self.silla_basica.calcular_precio()
-        assert precio == 165.0
+        assert precio == 165000.0
     
     def test_calculo_precio_silla_oficina(self):
         precio = self.silla_oficina.calcular_precio()
         # factor: 1 + 0.1 (respaldo) + 0.2 (cuero) = 1.3
         # price: 300 * 1.3 = 390
         # ruedas (+15), regulable (+20) -> 390 + 35 = 425
-        assert precio == 425.0
+        assert precio == 425000.0
     
     def test_es_silla_oficina(self):
         assert self.silla_oficina.es_silla_oficina() is True
@@ -93,7 +93,7 @@ class TestSofaCama:
             nombre="SofaCama Deluxe",
             material="Tela",
             color="Gris",
-            precio_base=800.0,
+            precio_base=800000.0,
             capacidad_personas=3,
             material_tapizado="tela",
             tamano_cama="matrimonial",
@@ -119,7 +119,7 @@ class TestSofaCama:
         # Base: 800. factor tela + respaldo + cap = 1.0 + 0.1(tela) + 0.1(resp) + 0.05*2(cap) = 1.3
         # price * 1.5 = 1560
         # +100 plegable, +300 colchon = 1960
-        assert self.sofacama.calcular_precio() == 1960.0
+        assert self.sofacama.calcular_precio() == 1960000.0
     
     def test_capacidad_total(self):
         capacidades = self.sofacama.obtener_capacidad_total()

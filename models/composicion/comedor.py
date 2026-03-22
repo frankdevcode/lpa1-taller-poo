@@ -93,7 +93,7 @@ class Comedor:
         else:
             descripcion += "SILLAS: Ninguna incluida\n"
             
-        descripcion += f"\n--- PRECIO TOTAL: ${self.calcular_precio_total():.2f} ---"
+        descripcion += f"\n--- PRECIO TOTAL: $ {self.calcular_precio_total():,.0f} COP ---"
         if len(self._sillas) >= 4:
             descripcion += "\n(Incluye 5% de descuento por set completo)"
             

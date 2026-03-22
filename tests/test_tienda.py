@@ -6,8 +6,8 @@ from models.concretos.mesa import Mesa
 class TestTiendaMuebles:
     def setup_method(self):
         self.tienda = TiendaMuebles("Muebleria Test")
-        self.silla = Silla("Silla Oficina", "Metal", "Negro", 100.0)
-        self.mesa = Mesa("Mesa Centro", "Vidrio", "Claro", 200.0, "redonda", 4.0)
+        self.silla = Silla("Silla Oficina", "Metal", "Negro", 100000.0)
+        self.mesa = Mesa("Mesa Centro", "Vidrio", "Claro", 200000.0, "redonda", 4.0)
         self.tienda.agregar_mueble(self.silla)
         self.tienda.agregar_mueble(self.mesa)
         
@@ -19,7 +19,7 @@ class TestTiendaMuebles:
         assert resultados[0].nombre == "Silla Oficina"
         
     def test_filtrar(self):
-        res_precio = self.tienda.filtrar_por_precio(0, 150)
+        res_precio = self.tienda.filtrar_por_precio(0, 150000)
         assert len(res_precio) == 1
         res_material = self.tienda.filtrar_por_material("vidrio")
         assert len(res_material) == 1

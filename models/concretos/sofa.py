@@ -18,7 +18,7 @@ class Sofa(Asiento):
     def calcular_precio(self) -> float:
         precio = self.precio_base * self.calcular_factor_comodidad()
         if self.tiene_chaise_longue:
-            precio += 100.0
+            precio += 100000.0
         return round(precio, 2)
         
     def obtener_descripcion(self) -> str:

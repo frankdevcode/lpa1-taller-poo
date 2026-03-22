@@ -27,9 +27,9 @@ class Silla(Asiento):
     def calcular_precio(self) -> float:
         precio = self.precio_base * self.calcular_factor_comodidad()
         if self.altura_regulable:
-            precio += 20.0
+            precio += 20000.0
         if self.tiene_ruedas:
-            precio += 15.0
+            precio += 15000.0
         return round(precio, 2)
         
     def obtener_descripcion(self) -> str:

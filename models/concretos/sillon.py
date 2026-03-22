@@ -27,9 +27,9 @@ class Sillon(Asiento):
     def calcular_precio(self) -> float:
         precio = self.precio_base * self.calcular_factor_comodidad()
         if self.reclinable:
-            precio += 50.0
+            precio += 50000.0
         if self.tiene_masajeador:
-            precio += 150.0
+            precio += 150000.0
         return round(precio, 2)
         
     def obtener_descripcion(self) -> str:

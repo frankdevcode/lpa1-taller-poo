@@ -25,11 +25,11 @@ class Armario(Almacenamiento):
         self._con_espejo = value
         
     def calcular_precio(self) -> float:
-        precio = self.precio_base + (self.numero_estantes * 10)
+        precio = self.precio_base + (self.numero_estantes * 10000)
         if self.tiene_puertas:
-            precio += self.numero_puertas * 30.0
+            precio += self.numero_puertas * 30000.0
         if self.con_espejo:
-            precio += 50.0
+            precio += 50000.0
         return round(precio, 2)
         
     def obtener_descripcion(self) -> str:

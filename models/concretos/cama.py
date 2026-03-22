@@ -26,9 +26,9 @@ class Cama(Mueble):
     def calcular_precio(self) -> float:
         precio = self.precio_base
         if self.tamano.lower() == "king":
-            precio += 100.0
+            precio += 100000.0
         if self.incluye_colchon:
-            precio += 200.0
+            precio += 200000.0
         return round(precio, 2)
         
     def obtener_descripcion(self) -> str:
