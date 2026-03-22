@@ -27,6 +27,6 @@ class TestComedor:
             self.comedor.agregar_silla(Silla(f"Silla Nueva {i}", "Madera", "Roble", 120.0))
         # Total sillas = 4. 
         # Price: mesa(500 + 6*10=560). silla = 120 * 1.2 = 144
-        # Total without discount = 560 + 4*144 = 1136
-        # With discount 0.95 = 1079.2
-        assert self.comedor.calcular_precio_total() == 1079.2
+        # Total sin descuento = 560 + 4*132 = 1088
+        # Con 5% descuento (0.95) = 1033.6
+        assert self.comedor.calcular_precio_total() == 1033.6
