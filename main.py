@@ -313,7 +313,7 @@ def mostrar_estadisticas_iniciales(tienda: 'TiendaMuebles') -> None:
     
     print(f"  📦 Total de muebles: {stats['total_muebles']}")
     print(f"  🍽️ Total de comedores: {stats['total_comedores']}")
-    print(f"  💰 Valor del inventario: ${stats['valor_inventario']:,.0f} COP}")
+    print(f"  💰 Valor del inventario: $ {stats['valor_inventario']:,.0f} COP")
     print(f"  🏷️ Descuentos activos: {stats['descuentos_activos']}")
     
     print("\n  📋 Distribución por tipos:")
