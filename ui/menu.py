@@ -10,9 +10,9 @@ from rich.text import Text
 from typing import List, Optional
 import time
 
-from ..services.tienda import TiendaMuebles
-from ..models.mueble import Mueble
-from ..models.composicion.comedor import Comedor
+from services.tienda import TiendaMuebles
+from models.mueble import Mueble
+from models.composicion.comedor import Comedor
 
 class MenuTienda:
     """

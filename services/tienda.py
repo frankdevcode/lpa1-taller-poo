@@ -4,8 +4,8 @@ Esta clase implementa el patrón de servicio para separar la lógica de negocio 
 """
 
 from typing import List, Dict, Optional, Union
-from ..models.mueble import Mueble
-from ..models.composicion.comedor import Comedor
+from models.mueble import Mueble
+from models.composicion.comedor import Comedor
 import datetime
 
 
