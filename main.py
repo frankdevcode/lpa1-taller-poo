@@ -64,7 +64,7 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             color="Roble",
             precio_base=500.0,
             forma="rectangular",
-            capacidad_personas=6
+            area=3.0
         ),
         Mesa(
             nombre="Mesa de Centro Redonda",
@@ -72,7 +72,7 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             color="Transparente",
             precio_base=300.0,
             forma="redonda",
-            capacidad_personas=4
+            area=2.0
         ),
         Mesa(
             nombre="Mesa de Trabajo Industrial",
@@ -80,7 +80,7 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             color="Gris",
             precio_base=450.0,
             forma="rectangular",
-            capacidad_personas=4
+            area=2.0
         )
     ]
     
@@ -92,8 +92,8 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             precio_base=800.0,
             tiene_respaldo=True,
             material_tapizado="cuero",
-            es_reclinable=True,
-            tiene_reposapiés=True
+            reclinable=True,
+            tiene_masajeador=True
         ),
         Sofa(
             nombre="Sofá Modular de 3 Plazas",
@@ -103,8 +103,7 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             capacidad_personas=3,
             tiene_respaldo=True,
             material_tapizado="tela",
-            es_modular=True,
-            incluye_cojines=True
+            tiene_chaise_longue=True
         ),
         Sofa(
             nombre="Sofá Chesterfield Clásico",
@@ -114,8 +113,7 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             capacidad_personas=2,
             tiene_respaldo=True,
             material_tapizado="cuero",
-            es_modular=False,
-            incluye_cojines=False
+            tiene_chaise_longue=False
         )
     ]
     
@@ -125,25 +123,26 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             material="Madera",
             color="Blanco",
             precio_base=600.0,
-            num_puertas=4,
-            num_cajones=2,
-            tiene_espejos=True
+            numero_estantes=4,
+            tiene_puertas=True,
+            numero_puertas=4,
+            con_espejo=True
         ),
         Cajonera(
             nombre="Cajonera Vintage 5 Cajones",
             material="Madera",
             color="Vintage",
             precio_base=300.0,
-            num_cajones=5,
-            tiene_ruedas=False
+            numero_cajones=5,
+            con_ruedas=False
         ),
         Cajonera(
             nombre="Cajonera Oficina con Ruedas",
             material="Metal",
             color="Gris",
             precio_base=180.0,
-            num_cajones=3,
-            tiene_ruedas=True
+            numero_cajones=3,
+            con_ruedas=True
         )
     ]
     
@@ -153,18 +152,16 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             material="Madera",
             color="Nogal",
             precio_base=1000.0,
-            tamaño="king",
-            incluye_colchon=True,
-            tiene_cabecera=True
+            tamano="king",
+            incluye_colchon=True
         ),
         Cama(
             nombre="Cama Individual Juvenil",
             material="Metal",
             color="Azul",
             precio_base=400.0,
-            tamaño="individual",
-            incluye_colchon=False,
-            tiene_cabecera=True
+            tamano="individual",
+            incluye_colchon=False
         ),
         Escritorio(
             nombre="Escritorio Ejecutivo L-Shape",
@@ -172,8 +169,9 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             color="Caoba",
             precio_base=750.0,
             forma="L",
-            tiene_cajones=True,
-            num_cajones=4
+            area=3.5,
+            numero_cajones=4,
+            tiene_pasacables=True
         ),
         Escritorio(
             nombre="Escritorio Gaming RGB",
@@ -181,8 +179,9 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
             color="Negro",
             precio_base=500.0,
             forma="rectangular",
-            tiene_cajones=False,
-            tiene_iluminacion=True
+            area=2.5,
+            numero_cajones=0,
+            tiene_pasacables=True
         )
     ]
     
@@ -193,7 +192,7 @@ def crear_catalogo_inicial(tienda: 'TiendaMuebles') -> None:
         precio_base=1500.0,
         capacidad_personas=3,
         material_tapizado="tela",
-        tamaño_cama="matrimonial",
+        tamano_cama="matrimonial",
         incluye_colchon=True,
         mecanismo_conversion="hidraulico"
     )
@@ -222,7 +221,7 @@ def crear_comedores_ejemplo(tienda: 'TiendaMuebles') -> None:
         color="Roble",
         precio_base=800.0,
         forma="rectangular",
-        capacidad_personas=8
+        area=4.0
     )
     
     sillas_familiares = []
@@ -249,7 +248,7 @@ def crear_comedores_ejemplo(tienda: 'TiendaMuebles') -> None:
         color="Negro",
         precio_base=600.0,
         forma="redonda",
-        capacidad_personas=4
+        area=2.0
     )
     
     sillas_modernas = []
